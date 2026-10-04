@@ -114,8 +114,7 @@ Several nonlinear relationships were identified, suggesting that nonlinear class
 
 The analysis also indicated that the orientation of the shower image relative to the camera center is particularly informative for distinguishing gamma events from background.
 
-<!-- Replace with your actual image path -->
-![EDA example](assets/eda_overview.png)
+![Selected feature distributions](assets/eda_feature_distributions.png)
 
 ---
 
@@ -321,8 +320,7 @@ The comparison demonstrates that nonlinear models clearly outperform the simple 
 
 The optimized Random Forest achieved the strongest overall performance.
 
-<!-- Replace with your actual image -->
-![Model comparison](assets/model_comparison.png)
+![Model comparison](assets/model_performance_heat_map.png)
 
 ---
 
@@ -382,8 +380,20 @@ training and validation performance are considerably closer.
 
 The validation curves continue to improve with increasing training-set size for several operating points, indicating that additional data could further improve performance.
 
-<!-- Replace with your actual image -->
-![Learning curves](assets/learning_curves.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/learning_curve_tpr_fpr_005.png" width="100%">
+      <br>
+      <b>FPR ≤ 0.05</b>
+    </td>
+    <td align="center">
+      <img src="assets/learning_curve_tpr_fpr_020.png" width="100%">
+      <br>
+      <b>FPR ≤ 0.20</b>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -439,7 +449,7 @@ The results suggest that the most relevant sources of discriminative information
 Because several original and engineered features are correlated, feature importance is interpreted at the level of information groups rather than as completely independent contributions.
 
 <!-- Replace with your actual image -->
-![Permutation feature importance](assets/permutation_importance.png)
+![Permutation feature importance](assets/permutation_features_importance.png)
 
 ---
 
@@ -504,21 +514,7 @@ The complete project repository contains:
 - learning curves
 - feature-importance analyses
 
-[View the complete project repository](REPLACE_WITH_REPOSITORY_LINK)
-
----
-
-## Future Work
-
-Possible extensions include:
-
-- grouped permutation importance for correlated features
-- gradient-boosting methods such as XGBoost, LightGBM, or CatBoost
-- nested cross-validation
-- further optimization of the very-low-FPR region
-- probability calibration
-- explicit operating-threshold selection using validation data
-- validation using additional or real telescope observations
+[View the complete project repository](https://github.com/k-skupin/MAGIC-Gamma-Telescope)
 
 ---
 
