@@ -314,11 +314,21 @@ This ensures that optimization focuses on the region of the ROC curve that is re
 
 ## Model Comparison
 
-Both the simple and optimized versions of the different model families are compared using stratified cross-validation.
+Both the simple and optimized versions of the different model families are compared
+using stratified cross-validation on the training data.
 
-The comparison demonstrates that nonlinear models clearly outperform the simple linear baseline.
+The comparison shows that nonlinear models clearly outperform the linear baseline,
+particularly at the more demanding low-FPR operating points.
 
-The optimized Random Forest achieved the strongest overall performance.
+The optimal model depends on the selected false-positive-rate constraint. At the
+strictest operating point of **FPR ≤ 0.01**, the optimized neural network achieves the
+best cross-validation performance. At **FPR ≤ 0.02**, the neural network and Random
+Forest perform very similarly, with the Random Forest selected for the final
+evaluation. From **FPR ≤ 0.05 onwards**, the optimized Random Forest provides the
+strongest performance.
+
+Overall, the optimized Random Forest is the strongest and most consistent model family
+across the investigated operating points.
 
 ![Model comparison](assets/model_performance_heat_map.png)
 
@@ -326,32 +336,52 @@ The optimized Random Forest achieved the strongest overall performance.
 
 ## Final Model Evaluation
 
-The test dataset is kept separate during:
+The test dataset is kept completely separate during:
 
 - model development
+- feature engineering decisions
 - hyperparameter optimization
 - model comparison
 - model selection
 
-The best model for each FPR operating point is selected exclusively based on training-set cross-validation.
+The best-performing model for each FPR operating point is selected exclusively based
+on stratified cross-validation on the training data.
 
-Only after model selection are the final models evaluated on the previously untouched test dataset.
+Only after the model-selection process is completed are the selected models evaluated
+on the previously untouched test dataset.
 
-This prevents information from the test set from influencing model selection.
+This separation prevents information from the test set from influencing model
+selection and provides a more realistic estimate of generalization performance.
 
 ### Final Results
 
-Replace the values below with the final test scores from the project.
-
 | FPR Limit | Selected Model | CV TPR | Test TPR |
 |---:|---|---:|---:|
-| ≤ 0.01 | Optimized Random Forest | `...` | `...` |
-| ≤ 0.02 | Optimized Random Forest | `...` | `...` |
-| ≤ 0.05 | Optimized Random Forest | `...` | `...` |
-| ≤ 0.10 | Optimized Random Forest | `...` | `...` |
-| ≤ 0.20 | Optimized Random Forest | `...` | `...` |
+| ≤ 0.01 | Optimized Neural Network | 0.361 | 0.361 |
+| ≤ 0.02 | Optimized Random Forest | 0.442 | 0.393 |
+| ≤ 0.05 | Optimized Random Forest | 0.636 | 0.668 |
+| ≤ 0.10 | Optimized Random Forest | 0.796 | 0.814 |
+| ≤ 0.20 | Optimized Random Forest | 0.927 | 0.935 |
 
----
+The final test results are generally consistent with the cross-validation estimates,
+indicating that the selected models generalize well to previously unseen data.
+
+At **FPR ≤ 0.01**, the neural network achieves a test TPR of **0.361**, matching the
+cross-validation result closely. At **FPR ≤ 0.02**, the Random Forest shows a somewhat
+lower test performance than estimated during cross-validation.
+
+For the operating points from **FPR ≤ 0.05 to FPR ≤ 0.20**, test performance is slightly
+higher than the corresponding cross-validation estimate. This suggests that the
+cross-validation procedure provided a realistic and, in these cases, slightly
+conservative estimate of final model performance.
+
+As expected, achievable gamma efficiency increases substantially as the allowed
+false-positive rate is relaxed. The results therefore highlight the trade-off between
+strong background rejection and gamma detection efficiency.
+
+Overall, the optimized Random Forest provides the strongest and most consistent
+performance across the practically relevant operating points, while the optimized
+neural network performs best in the most restrictive **FPR ≤ 0.01** regime.
 
 ## Learning Curves
 
@@ -417,7 +447,7 @@ Features related to the following properties are particularly relevant:
 Because these two features contain strongly overlapping information, their individual importance values should not be interpreted independently.
 
 <!-- Replace with your actual image -->
-![Random Forest feature importance](assets/feature_importance.png)
+![Random Forest feature importance](assets/random_forest_feature_importance.png)
 
 ---
 
