@@ -561,3 +561,8 @@ The comparison of several model families shows that nonlinear approaches substan
 Among the evaluated methods, the optimized Random Forest provides the strongest overall performance.
 
 The combination of exploratory data analysis, physically motivated feature engineering, custom scoring, cross-validation, Bayesian optimization, learning-curve analysis, and feature-importance methods provides both strong predictive performance and insight into the underlying classification problem.
+
+
+---
+
+[← Back to Data Science Portfolio](../../)
