@@ -479,7 +479,7 @@ The results suggest that the most relevant sources of discriminative information
 Because several original and engineered features are correlated, feature importance is interpreted at the level of information groups rather than as completely independent contributions.
 
 <!-- Replace with your actual image -->
-![Permutation feature importance](assets/permutation_features_importance.png)
+![Permutation feature importance](assets/permutation_feature_importance.png)
 
 ---
 
