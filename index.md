@@ -57,4 +57,4 @@ data analysis, and model evaluation.
 
 </div>
 
-[View project](projects/magic-gamma/)
+
