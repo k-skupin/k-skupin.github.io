@@ -573,7 +573,7 @@ It is a statistical estimate of how many more events were observed from the sour
 A second quantity, the **detection significance**, describes how convincing this excess is. A large significance means that the observed excess is very unlikely to be caused only by random background fluctuations.
 
 <p align="center">
-  <img src="results/dl3/figures/dl3_on_off_geometry_schematic.png"
+  <img src="assets/dl3_on_off_geometry_schematic.png"
        alt="Schematic ON/OFF background estimation"
        width="550">
 </p>
@@ -622,7 +622,7 @@ In simple terms:
 This confirms that the analysis pipeline can detect the known gamma-ray source in real telescope data.
 
 <p align="center">
-  <img src="results/dl3/figures/dl3_on_background_excess.png"
+  <img src="assets/dl3_on_background_excess.png"
        alt="Energy-binned ON events, estimated background and excess"
        width="800">
 </p>
@@ -647,13 +647,13 @@ Under the brightest conditions:
 Under dark or low-background conditions, the excess rate is approximately **850–880 events per hour**.
 
 <p align="center">
-  <img src="results/dl3/figures/safe_energy_threshold_vs_nsb.png"
+  <img src="assets/safe_energy_threshold_vs_nsb.png"
        alt="Safe energy threshold under different night-sky background conditions"
        width="750">
 </p>
 
 <p align="center">
-  <img src="results/dl3/figures/excess_rate_vs_nsb.png"
+  <img src="assets/excess_rate_vs_nsb.png"
        alt="Gamma-ray excess rate under different night-sky background conditions"
        width="750">
 </p>
@@ -685,7 +685,7 @@ The measured excess rate decreases strongly at larger offsets:
 ```
 
 <p align="center">
-  <img src="results/dl3/figures/excess_rate_vs_camera_offset.png"
+  <img src="assets/excess_rate_vs_camera_offset.png"
        alt="Gamma-ray excess rate versus camera offset"
        width="750">
 </p>
