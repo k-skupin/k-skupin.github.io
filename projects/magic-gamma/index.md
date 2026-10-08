@@ -877,6 +877,11 @@ Among the evaluated methods, the optimized Random Forest provides the strongest 
 
 The combination of exploratory data analysis, physically motivated feature engineering, custom scoring, cross-validation, Bayesian optimization, learning-curve analysis, and feature-importance methods provides both strong predictive performance and insight into the underlying classification problem.
 
+The project shows how a trained gamma/hadron classifier could be integrated into a real MAGIC analysis pipeline as an event-level preselection step, strongly reducing hadronic background before further analysis.
+
+The classifier does not replace the final astronomical background estimation, but complements it: machine learning identifies gamma-like events, while ON/OFF or likelihood-based methods are still required to obtain reliable source significance, spectra, and flux measurements.
+
+
 
 ---
 
