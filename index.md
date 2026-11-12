@@ -58,14 +58,29 @@ data analysis, and model evaluation.
 </div>
 
 ### Rossmann Retail Sales Forecasting
+<div style="display:flex; gap:28px; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:32px;">
+  <div style="flex:1 1 300px; min-width:0;">
+    <h3 style="margin-top:0;">Rossmann Retail Sales Forecasting</h3>
+    <p>
+      Daily sales forecasts for Rossmann stores using historical sales, planned
+      promotions, opening schedules, and calendar information. The project covers
+      data preparation in SQLite, chronological model evaluation, and a batch
+      forecasting script.
+    </p>
+    <p><a href="projects/rossmann-retail/">View project details →</a></p>
+  </div>
 
-Daily sales forecasts for Rossmann stores using historical sales, planned
-promotions, opening schedules, and calendar information. The project covers
-data preparation in SQLite, chronological model evaluation, and a batch
-forecasting script.
-
-[![Rossmann sales forecasting MAE for the baseline and the best model in each validation window](projects/rossmann-retail/assets/rossmann_preview.png)](projects/rossmann-retail/)
-
-*Validation results based on the [Rossmann Store Sales competition dataset on Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/data).*
+  <figure style="flex:0 1 360px; max-width:100%; margin:0;">
+    <a href="projects/rossmann-retail/">
+      <img src="projects/rossmann-retail/assets/rossmann_preview.png"
+           alt="Rossmann forecast MAE compared with the baseline across three validation windows"
+           style="display:block; width:100%; height:auto; border-radius:10px;">
+    </a>
+    <figcaption style="margin-top:6px; font-size:0.85em;">
+      Validation results based on the
+      <a href="https://www.kaggle.com/competitions/rossmann-store-sales/data">Rossmann Store Sales competition dataset on Kaggle</a>.
+    </figcaption>
+  </figure>
+</div>
 
 [View project details →](projects/rossmann-retail/)
