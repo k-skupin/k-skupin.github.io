@@ -57,4 +57,15 @@ data analysis, and model evaluation.
 
 </div>
 
+### Rossmann Retail Sales Forecasting
 
+Daily sales forecasts for Rossmann stores using historical sales, planned
+promotions, opening schedules, and calendar information. The project covers
+data preparation in SQLite, chronological model evaluation, and a batch
+forecasting script.
+
+[![Rossmann sales forecasting MAE for the baseline and the best model in each validation window](projects/rossmann-retail/assets/rossmann_preview.png)](projects/rossmann-retail/)
+
+*Validation results based on the [Rossmann Store Sales competition dataset on Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/data).*
+
+[View project details →](projects/rossmann-retail/)
